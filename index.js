@@ -125,10 +125,11 @@ all the numbers between 1 and 4 (both inclusive) is 10. */
 const sumAll = arr => {
   let max = Math.max(...arr);
   let min = Math.min(...arr);
-  let sum = 0;
+  let newArr = [];
   for (let i = min; i <= max; i++) {
-    sum += i;
+    newArr.push(i);
   }
+  const sum = newArr.reduce((acc, num) => (acc += num), 0);
   return sum;
 };
 
